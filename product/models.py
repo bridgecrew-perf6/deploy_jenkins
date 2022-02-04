@@ -98,16 +98,16 @@ class ProductReal(models.Model):
     add_price = models.IntegerField('추가가격', default=0)
     stock_quantity = models.PositiveIntegerField('재고개수', default=0)  # 품절일때 유용함
 
-#     class Meta:
-#         constraints = [
-#             UniqueConstraint(
-#                 'product',
-#                 'option_1_name',
-#                 'option_2_name',
-#                 'option_3_name',
-#                 name='option_name_unique',
-#             ),
-#         ]
+    class Meta:
+        constraints = [
+            UniqueConstraint(
+                'product',
+                'option_1_name',
+                'option_2_name',
+                'option_3_name',
+                name='option_name_unique',
+            ),
+        ]
 
     @property
     def rgb_color(self):
