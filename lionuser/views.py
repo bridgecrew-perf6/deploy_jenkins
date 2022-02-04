@@ -121,6 +121,7 @@ class LionUserAPI(APIView):
     # permission_classes = [IsAuthenticated]
 
     def get(self, request):
+        print("JenkinsTest")
         lions = Lionuser.objects.all();
         serializer = LionuserSerializer(lions, many=True)
         return Response({'status': 200, 'payload': serializer.data})
