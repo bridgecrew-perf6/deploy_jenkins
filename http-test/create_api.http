@@ -1,0 +1,78 @@
+##카카오
+GET /oauth/authorize?client_id=183b1738c1dcd7012baaf747c970ba3f&redirect_uri=http://localhost:8000&response_type=code HTTP/1.1
+Host: kauth.kakao.com
+PcfI1P6xGcD9MUpCwSEvSW8mDxv5l8a0dyU4wcloQ5C2knsgQkD4h6T5wwiCi9i3Kkr1aAo9dBEAAAF-V-aNXA
+
+
+### 쇼핑몰 생성 처리
+POST http://localhost:8000/shop
+Content-Type: application/json
+
+{
+  "shop_name": "98도씨",
+  "img_url": "data:image/jpeg;base64,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",
+  "category_name": "여성의류"
+}
+
+
+### 아이템 생성 처리
+POST  http://localhost:8000/product/admin
+Content-Type: application/json
+
+{"shop": 1,
+  "productImgs": [{"img_url": ""}],
+    "product_name":"잠바3",
+    "description":"따뜻",
+    "price":900008,
+    "stock":94,
+    "optionGroups" : [{"optionGroup":"사이즈",
+                        "optionItem":[{
+                            "optionItem":"55",
+                            "addPrice":0
+                        },{
+                            "optionItem":"66",
+                            "addPrice":500
+                        }]}
+                     ,{"optionGroup":"색상",
+                        "optionItem":[{
+                            "optionItem":"black",
+                              "addPrice":0
+                        },
+                        {
+                            "optionItem":"red",
+                            "addPrice":700
+                        }]}]
+}
+
+### 아이템 생성 처리
+POST  http://localhost:8000/shop/3/items
+Content-Type: application/json
+
+{
+    "product_name":"패딩",
+    "description":"구려",
+    "price":100000,
+    "stock":150,
+    "option_group" : [{"optionGroup":"사이즈",
+                        "optionItem":[{
+                            "optionItem":"55",
+                            "addPrice":0
+                        },{
+                            "optionItem":"88",
+                            "addPrice":1500
+                        }]}
+                     ,{"optionGroup":"색상",
+                        "optionItem":[{
+                            "optionItem":"beige",
+                              "addPrice":0
+                        },
+                        {
+                            "optionItem":"brown",
+                            "addPrice":1000
+                        }]}]
+}
+
+### 토큰 생성 처리
+GET  http://localhost:8000/user/login/test
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzOTgzOTM4LCJpYXQiOjE2NDM5ODM4NzgsImp0aSI6IjdmNjdkYmEwYTVkZjRiN2ZiMjgxNjM1YWVlM2YzYTZlIiwidXNlcl9pZCI6MiwibmFtZSI6ImhvbGx5IiwiZW1haWwiOiJob2xseUBnbWFpbC5jb20iLCJpc19zdGFmZiI6ZmFsc2UsInVzZXJfdHlwZSI6Ilx1YjljOFx1Y2YxM1x1YWQwMFx1YjlhY1x1Yzc5MCIsInNob3AiOjF9.GjPK5sixFf2Op5sVqCmGb5C3BxYgXZ58u2kwlNa1BZM
