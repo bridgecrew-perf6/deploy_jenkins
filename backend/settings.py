@@ -107,23 +107,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'calendar_db',
-#         'USER': 'calendar',
-#         'PASSWORD': 'calendar',
-#         'HOST': 'calendar_db',
-#         'PORT': '3306'
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'calendar_db',
+        'USER': 'calendar',
+        'PASSWORD': 'calendar',
+        'HOST': 'calendar_db',
+        'PORT': '3306'
+    }
+}
 
 
 AUTH_USER_MODEL = 'lionuser.lionUser'
